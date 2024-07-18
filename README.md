@@ -17,9 +17,14 @@ MiniAn is an analysis pipeline and visualization tool inspired by both [CaImAn](
 1. Create a new conda env: `conda create -y --name minian`
 1. Activate the environment: `conda activate minian`
 1. Install MiniAn: `conda install -y -c conda-forge minian`
+1. Activate conda env: `conda activate minian`
+1. Fix Panel installation:
+    * On Windows: Copy panel files from `.conda/envs/minian/site-packages/` to `.conda/envs/minian/Lib/site-packages/`
+    * On Linux: Install panel with pip in minian conda environment: `pip install panel=0.8.0`
+1. Install pywiz libraries with conda: `conda install -n minian -c pyviz pyviz_comms=2.2.1`
+1. Install shot-scraper CLI tool in minian conda environment: `pip install shot-scraper`. If this is the first time you will have to install additional dependencies via `shot-scraper install` and/or `playwright install`. Follow the directions on the command line.
 1. Install the pipeline notebooks: `minian-install --notebooks`
 1. Optional install the demo movies: `minian-install --demo`
-1. Install shot-scraper CLI tool: `pip install shot-scraper`. If this is the first time you will have to install additional dependencies via `shot-scraper install` and/or `playwright install`. Follow the directions on the command line.
 1. Fire up jupyter: `jupyter notebook` and open the notebook "pipeline.ipynb"
 
 # Documentation
