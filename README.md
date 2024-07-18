@@ -19,6 +19,7 @@ MiniAn is an analysis pipeline and visualization tool inspired by both [CaImAn](
 1. Install MiniAn: `conda install -y -c conda-forge minian`
 1. Install the pipeline notebooks: `minian-install --notebooks`
 1. Optional install the demo movies: `minian-install --demo`
+1. Install shot-scraper CLI tool: `pip install shot-scraper`. If this is the first time you will have to install additional dependencies via `shot-scraper install` and/or `playwright install`. Follow the directions on the command line.
 1. Fire up jupyter: `jupyter notebook` and open the notebook "pipeline.ipynb"
 
 # Documentation
