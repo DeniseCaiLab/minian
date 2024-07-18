@@ -2265,7 +2265,9 @@ def screenshot_plot(
     if not name and not title:
         name = 'output.png'
     else:
-        name = name if name else title.strip().lower().replace(' ', '_').replace(',', '').replace(':', '').replace('=', '-') + '.png'
+        name = name if name else title.strip().lower().replace(' ', '_').replace(',', '') \
+                                    .replace(':', '').replace('=', '-').replace("'", '') \
+                                    .replace('"', ""). replace('{', '').replace('}', '') + '.png'
     dest_folder = Path(dest_folder) if type(dest_folder) is str else dest_folder
     dest_folder.mkdir(parents=True, exist_ok=True)
     tmp_html = dest_folder / '__tmp.html'
