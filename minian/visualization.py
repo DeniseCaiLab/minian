@@ -2294,12 +2294,7 @@ def screenshot_plot(
         if res == success and dest.exists():
             downloaded = True
             break
-        elif res != success:
-            continue
         time.sleep(retry_wait)
-        if dest.exists():
-            downloaded = True
-            break
     if not downloaded:
         raise RuntimeError('Failed to screenshot html. Potential problem with shot-scraper.'
                            f'Subprocess result: {res=}, file created: {dest.exists()}.')
